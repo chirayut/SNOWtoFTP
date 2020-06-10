@@ -20,7 +20,7 @@ FileGenerator.prototype = {
         this.URL = Packages.java.net.URL;
         this.URLConnection = Packages.java.net.URLConnection;
         this.String = Packages.java.lang.String;
-		    this.PrintStream = Packages.java.io.PrintStream;
+	this.PrintStream = Packages.java.io.PrintStream;
 
         this.fileContentStr = probe.getParameter("file_content");
         this.fileNameStr = probe.getParameter("file_name");
@@ -43,12 +43,12 @@ FileGenerator.prototype = {
             var conn = url.openConnection();
             var outputStream = conn.getOutputStream();
             buffer = this.BufferedOutputStream(outputStream);
-			      var output = this.PrintStream(buffer);
+	    var output = this.PrintStream(buffer);
             output.print(this.fileContentStr);
 			
-			      buffer.close();
+	    buffer.close();
             outputStream.close();
-			      output.close();
+	    output.close();
         } catch (e) {
             exceptionOccurred = true;
             errorMes = e.toString();
