@@ -1,16 +1,16 @@
 launchProbe('MIDSERVERNAME', 'ECCNAME', 'TEST TEST TEST', 'TEST.txt', '/FTPFolder');
 function launchProbe(midServer, ecc_name, file_content, file_name, file_path) {
-		var ftp_host = 'host';
-		var ftp_user = 'username';
-		var ftp_password = 'password';
-    var jprobe = new JavascriptProbe(midServer);
-    jprobe.setName(ecc_name);
-    jprobe.setJavascript("var fg = new FileGenerator('" + ecc_name + "'); fg.processFTP();");
-    jprobe.addParameter("file_content", file_content);
-    jprobe.addParameter("file_name", file_name);
-    jprobe.addParameter("file_path", file_path);
-		jprobe.addParameter("ftp_host", ftp_host);
-    jprobe.addParameter("ftp_user", ftp_user);
-    jprobe.addParameter("ftp_password", ftp_password);
-    jprobe.create();
+	var ftp_host = 'host';
+	var ftp_user = 'username';
+	var ftp_password = 'password';
+	var jprobe = new JavascriptProbe(midServer);
+	jprobe.setName(ecc_name);
+	jprobe.setJavascript("var fg = new FileGenerator('" + ecc_name + "'); fg.processFTP();");
+	jprobe.addParameter("file_content", file_content);
+	jprobe.addParameter("file_name", file_name);
+	jprobe.addParameter("file_path", file_path);
+	jprobe.addParameter("ftp_host", ftp_host);
+	jprobe.addParameter("ftp_user", ftp_user);
+	jprobe.addParameter("ftp_password", ftp_password);
+	jprobe.create();
 }
