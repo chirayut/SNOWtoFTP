@@ -13,4 +13,4 @@ function launchProbe(midServer, ecc_name, file_content, file_name, file_path) {
     jprobe.addParameter("ftp_user", ftp_user);
     jprobe.addParameter("ftp_password", ftp_password);
     jprobe.create();
-},
+}
