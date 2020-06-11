@@ -4,28 +4,23 @@ FileGenerator.prototype = {
     initialize: function(name) {
         this.Name = name;
 
-        // Package
+        //** Packages **
         this.Properties = Packages.java.util.Properties;
         this.StringUtil = Packages.com.glide.util.StringUtil;
-        this.BufferedWriter = Packages.java.io.BufferedWriter;
-        this.File = Packages.java.io.File;
-        this.FileWriter = Packages.java.io.FileWriter;
-        this.FileOutputStream = Packages.java.io.FileOutputStream;
-        this.FileInputStream = Packages.java.io.FileInputStream;
-        this.OutputStream = Packages.java.io.OutputStream;
-        this.OutputStreamWriter = Packages.java.io.OutputStreamWriter;
-        // added bufferedoutputstream to encode file
-        this.BufferedOutputStream = Packages.java.io.BufferedOutputStream;
-        this.Thread = Packages.java.lang.Thread;
+	this.Thread = Packages.java.lang.Thread;
         this.URL = Packages.java.net.URL;
         this.URLConnection = Packages.java.net.URLConnection;
         this.String = Packages.java.lang.String;
 	this.PrintStream = Packages.java.io.PrintStream;
+        // added bufferedoutputstream to encode file
+        this.BufferedOutputStream = Packages.java.io.BufferedOutputStream;       
 
+	//** File Content **
         this.fileContentStr = probe.getParameter("file_content");
         this.fileNameStr = probe.getParameter("file_name");
         this.filePathStr = probe.getParameter("file_path");
 
+	//** FTP Details **
         this.ftpUrl = "ftp://%s:%s@%s/%s;type=i";
         this.ftpHost = probe.getParameter("ftp_host");
         this.ftpUser = probe.getParameter("ftp_user");
